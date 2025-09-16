@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <mUAT charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Case — Detail</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+<body>
+  <!-- 自定义鼠标指针 -->
+  <div class="cursor"></div>
+
+  <!-- 顶部导航，延续主站风格 -->
+  <header class="header">
+    <div class="nav-right">
+        <a href="main.html" class="logo">Life is...</a>
+    </div>
+    <nav class="nav-center">
+        <a href="main.html">WORK</a>
+        <a href="bug.html">BUGS</a>
+        <a href="me.html">ME</a>
+    </nav>
+</header>
+
+   <!-- 主要内容区域 -->
+   <main class="main-content">
+    <section class="intro">
+        <span class="text">Metalshub—Tolling Solution</span>
+        <h1 class="title">A workflow tool for contracts, allocations, and production orders in tolling.</h1>
+        <div class="intro-roles">
+            <p class="role-left">PROTOTYPE, PRODUCT DESIGN, UAT</p>
+            <p class="role-right">2024</p>
+          </div>
+    </section>
+    <div class="首屏视觉"><img src="../img/Tolling/Tolling 主屏.png" alt="首屏视觉"></div>
+    
+  <!-- 1:9 主体 -->
+  <div class="case-wrap">
+    <!-- 最左侧目录菜单 -->
+    <aside class="case-menu" id="menu">
+      <div class="menu-group">
+        <a class="menu-title">CONTENT</a>
+        <a href="#introduction" class="active">INTRODUCTION</a>
+        <a href="#overview">OVERVIEW</a>
+        <a href="#research">EARLY RESEARCH</a>
+        <a href="#problem">PROBLEM</a>
+        <a href="#flows">INITIAL IDEATION</a>
+        <a href="#ia">FINAL DESIGN</a>
+        <a href="#outcome">OUTCOME</a>
+        <a href="#more">MORE</a>
+      </div>
+      <div class="menu-note">⚡️Powered by Cursor.ai</div>
+    </aside>
+
+    <!-- 右侧内容区 -->
+    <main class="case-content">
+      <!-- 首屏 -->
+      <section id="introduction" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">INTRODUCTION</h2>
+          <h1 class="case-title">Tolling Solution</h1>
+          <p class="case-description">Tolling is the process of converting raw materials into finished products through third-party processors under contract. The solution covers the full workflow: contract setup, allocation of lots, production orders, and balance tracking. </p>
+          <p class="case-description-black">Together with the product manager, I led the 0→1 process, covering weekly client interviews, prototyping and testing, field research, product design, development handover, and on-site UAT.</p>
+          
+          <div class="project-details">
+            <div class="detail-row">
+              <span class="detail-label">YEAR</span>
+              <span class="detail-value">2024</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">TIMELINE</span>
+              <span class="detail-value">	Ideation & Design – 4 months<br>
+                Testing & Validation – 1 month<br>
+                Development – 6 months<br>
+                Feature Extensions – 4 months</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">ROLE</span>
+              <span class="detail-value">Product Designer</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">TEAM</span>
+              <span class="detail-value">Product Manager<br>Front-end Engineer x2<br>Back-end Engineer x2<br>Data Scientist x2<br> Customer Success Manager x2<br> QA Engineer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="overview" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">OVERVIEW</h2>
+          <h1 class="case-title"  style="margin-bottom: 80px;">What is Tolling?</h1>
+          <div class="problem-divider"></div>
+          <p class="case-description">Tolling is a contract-based process where a company sends raw materials to a processor to be converted into finished products. The ownership of the material stays with the company, while the processor is compensated through a fee or a portion of the output. </p>
+          <p class="case-description">The process is highly complex: it involves managing contracts, transport, processing times, output ratios, fees, penalties, and even pricing risks. Every step has to match up, otherwise mistakes can lead to losses. </p>
+          <p class="case-description-black"">There was no existing software that could cover the entire workflow. Most companies were still managing it with Excel and emails, which was messy and error-prone. We were able to turn these complicated rules into a clear and usable system that makes the process more efficient and transparent. </p>
+        </div>
+        <figure>
+          <img src="../img/Tolling/1.png" alt="branding">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/2.png" alt="workflow">
+        </figure>
+        <div class="grid-2">
+          <figure>
+            <img src="../img/Tolling/3-01.png" alt="contract">
+          </figure>
+          <figure>
+            <img src="../img/Tolling/3-02.png" alt="allocation">
+          </figure>
+        </div>
+      </section>
+
+           <!-- 用户与发现 -->
+           <section id="research" class="hero">
+            <div class="text-content">
+              <h2 class="section-title">EARLY RESEARCH</h2>
+              <h3 class="case-title">Setting our preliminary research goals.</h3>
+              <p class="case-description">Our team traveled to London for several days of intensive on-site interviews. Through direct conversations with stakeholders, we mapped the end-to-end tolling workflow for the first time and gained a holistic view of the project.</p>
+
+                <p class="case-description-black">Through our early research, we learned that the tolling workflow starts when the mine shares assay results, which trigger the creation of a lot in the system. Each lot must then be assigned a Quotational Period (QP) under strict rules before it can be allocated to a roaster. Once allocated, the company places production orders for MoOx or FeMo, and the roaster processes the material according to agreed timelines and fees. Finally, balances are tracked to reconcile inputs, deductions, and finished outputs against contractual obligations.</p>
+          
+            </div>
+            <figure>
+              <img src="../img/Tolling/early research.png" alt="photos of early research">
+            </figure>
+          </section>
+
+        <!-- 问题与目标 -->
+        <section id="problem" class="hero">
+          <div class="text-content">
+            <h2 class="section-title">PROBLEM</h2>
+            <p class="case-description">The people we engaged with were operators from the traditional commodities industry. Their current workflows rely heavily on Excel spreadsheets for record-keeping and even fax machines for communication. </p>
+            <div class="problem-divider"></div>
+            <p class="case-description-black">Compared to the users we typically design for, they are more conservative, less open to innovation, and prefer familiar tools over new digital solutions.</p>
+            <div class="accordion">
+              <div class="accordion-item active">
+                <div class="accordion-header">
+                  <h4 class="case-title">Resistance to change</h4>
+                  <span class="accordion-icon">−</span>
+                </div>
+                <div class="accordion-content">
+                  <p class="case-description">Many colleagues questioned the need for a digital platform. They feared that introducing a new tool would disrupt rather than improve their daily work, adding friction instead of saving time.</p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h4 class="case-title">Fragmented workflows</h4>
+                  <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                  <p class="case-description">Key processes such as lot creation, QP declarations, allocations, and reconciliations are scattered across spreadsheets and manual communication. This leads to frequent errors, lack of transparency, and difficulty collaborating across teams.</p>
+                </div>
+              </div>
+              
+              <div class="accordion-item">
+                <div class="accordion-header">
+                  <h4 class="case-title">Disconnected collaboration</h4>
+                  <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-content">
+                  <p class="case-description">Front office and back office teams often operate in silos. During our interviews, it was common to hear that they “didn’t know who was responsible for what, or how a task was handled.” This lack of clarity slows down decision-making and creates further inefficiencies</p>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="flows" class="hero">
+          <div class="text-content">
+            <h2 class="section-title">Initial Ideation</h2>
+          </div>
+          <div class="text-content">
+            <div class="problem-divider"></div>
+            <p class="case-description-black">Tolling in metals is far more complex than a standard supply chain process. Unlike commodities with uniform specifications, metal lots are distinguished by grades rather than fixed standards. Roasters evaluate incoming lots by grade, and each grade comes with its own tolling fee, packaging requirement, incoterm option, and conversion timeline. These variables stack together, making cost and scheduling highly sensitive to even small changes. </p>
+          </div>
+          <figure>
+            <img src="../img/Tolling/4.png" alt="solution">
+          </figure>
+          <figure>
+            <img src="../img/Tolling/5.png" alt="problem">
+          </figure>
+          <div class="text-content">
+            <p class="case-description">What makes it more intricate is the practice of blending. Lower-grade lots can be combined with higher-grade ones to reach an intermediate quality, which reduces conversion costs compared to processing poor-quality lots separately. This blending is a paper-based adjustment that directly impacts fees and contractual obligations. </p>
+            <p class="case-description-black"">In practice, grades are not static. Lots can be re-negotiated between producer and roaster. For example, a grade C lot may be elevated to grade B if both sides agree on adjusted terms. This fluidity means that tolling systems must handle not only contractual rules like M+5 QP declarations, obligations, and balances, but also real-world dynamics like grade negotiations, blending strategies, and variable conversion times. </p>
+            <!-- Brief Section -->
+            <div class="brief-section">
+              <h4 class="brief-title">Principles</h4>
+              <div class="brief-quote">
+                <span class="quote-mark"><img src="../img/icon/quote.svg" alt="quote"></span>
+                <p class="brief-text">Replicate real-world workflows as closely as possible, so the tool feels familiar, minimizes learning costs, and avoids adding operational burden.</p>
+              </div>
+            </div>
+        
+          </div>
+        </section>
+      <!-- 信息架构 -->
+      <section id="ia" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">Final Design</h2>
+          <h3 class="case-title">Contracts</h3>
+          <p class="case-description">Contracts are the fastest way to understand how the entire tolling process works. Each contract typically comes with a wide range of clauses, often varying from case to case. To bring structure, we analyzed existing agreements, identified the most common and universal terms, and designed the system to support them directly while also allowing optional inputs for customization. </p>
+            <div class="problem-divider"></div>
+            <p class="case-description">In current practice, teams rely on large Excel spreadsheets, cutting them into sections and building formulas to simulate allocation outcomes. These ad-hoc models help them decide which contract and roaster will maximize value, but the process is manual, error-prone, and hard to maintain.</p>
+            <p class="case-description-black">To support this, we extended the platform’s existing contract workflows by introducing a contract split feature. Once a parent contract is defined, users can quickly generate child contracts that reflect specific terms or timeframes. Alongside this, we integrated Excel reading capabilities, enabling users to analyze and reference contract data directly within the system.</p>
+        </div>
+        <figure>
+          <img src="../img/Tolling/contract.gif" alt="contract">
+        </figure>
+      </section>
+
+      <!-- 关键流程 -->
+      <section id="flows" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">Final Design</h2>
+          <div class="text-content">
+            <h3 class="case-title">Allocation</h3>
+            <p class="case-description">Allocation is the feature most critical to the front office. Lots usually require third-party assays before they can be allocated, meaning users must first upload assay results into inventory. Once a QP (Quotational Period) is declared, the lot becomes locked and cannot be reallocated. </p>
+            <p class="case-description">In current practice, teams rely on large Excel spreadsheets, cutting them into sections and building formulas to simulate allocation outcomes. These ad-hoc models help them decide which contract and roaster will maximize value, but the process is manual, error-prone, and hard to maintain. </p>
+            <p class="case-description-black">To digitize this, we invested heavily in the allocation design, producing 21 draft workflows that went through multiple rounds of user and technical reviews.</p>
+          </div>
+        </div>
+        <figure>
+          <img src="../img/Tolling/Allocation.png" alt="allocation">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/6.png" alt="allocation">
+        </figure>
+        <div class="text-content">
+          <div class="problem-divider"></div>
+            <p class="case-description-black">We divided the feature into two main views. The first is a balance view, modeled after users’ Excel habits but built on a structured data model for clarity. The second is an allocation view that integrates balances through the concept of batches and combines delivery with allocation. A calculator at the bottom displays floating results to reduce manual work and better reflect real supply chain logic.</p>
+          <p class="case-description">These decisions not only matched user expectations but also significantly reduced development effort. Early testing showed strong acceptance from users, while the system’s architecture remains scalable for future enhancements.</p>
+        </div>
+        <figure>
+          <img src="../img/Tolling/7.png" alt="allocation">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/8.png" alt="allocation">
+        </figure>
+      </section>
+
+      <section id="flows" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">Final Design</h2>
+          <div class="text-content">
+            <h3 class="case-title">Production Orders</h3>
+            <p class="case-description">Production order functions differently from a typical order. Instead of one shipment, it can contain multiple products going to different destinations, each with its own status and timeline. This makes the order more like a container of sub-orders, where progress is tracked individually. </p>
+            <p class="case-description-black">Every item within a production order directly affects the balance view. As products move through conversion, delivery, and confirmation, the system must update contractual obligations and available inventory in real time.  </p>
+          </div>
+        </div>
+        <figure>
+          <img src="../img/Tolling/Production Order.gif" alt="allocation">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/9.png" alt="allocation">
+        </figure>
+      </section>
+
+      <!-- 结果与复盘 -->
+      <section id="metrics" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">Final Design</h2>
+          <p class="case-description">After the MVP release, we added reconciliation and formula features based on back office needs. In tolling, balances are not static—they must be recalculated against assays, contracts, and operational outcomes. The client’s data scientists had built models to predict these outcomes, but users still needed to reconcile them with reality. </p>
+            <p class="case-description-black">The initial request was an Excel-like type editor, but this was too heavy for our team to implement. Instead, we broke it into two parts: a modal input tool that transforms all provided equations into configurable fields, and a formula preview so users can quickly verify if their inputs are correct. </p>
+        </div>
+        <figure>
+          <img src="../img/Tolling/more1.png" alt="allocation">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/more2.png" alt="allocation">
+        </figure>
+        <figure>
+          <img src="../img/Tolling/more3.png" alt="allocation">
+        </figure>
+      </section>
+      <section id="outcome" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">Outcome</h2>
+          <p class="case-description-black">The tolling platform not only digitized a highly manual process but also delivered measurable business impact across efficiency, cost, and compliance. </p>
+          <div class="retrospective-points">
+            <div class="retrospective-item">
+              <h3 class="retrospective-title" data-number="1">Stronger compliance</h3>
+              <p class="case-description">Structured workflows and formula validation ensured traceability and audit readiness across plants and contracts.</p>
+            </div>
+            
+            <div class="retrospective-item">
+              <h3 class="retrospective-title" data-number="2">Lower costs</h3>
+              <p class="case-description">Modular design reduced both development effort and manual work, saving time and resources.</p>
+            </div>
+            
+            <div class="retrospective-item">
+              <h3 class="retrospective-title" data-number="3">High adoption & satisfaction</h3>
+              <p class="case-description">By mirroring real workflows, the solution gained user trust and delivered strong client satisfaction in a conservative industry.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid-2">
+          <figure>
+            <img src="../img/Tolling/10-01.png" alt="contract">
+          </figure>
+          <figure>
+            <img src="../img/Tolling/10-02.png" alt="allocation">
+          </figure>
+        </div>
+      </section>
+
+      <section id="outcome" class="hero">
+        <div class="text-content">
+          <h2 class="section-title">More</h2>
+          <p class="case-description">Tolling is not only complex for our customers, but also for colleagues who had never seen the process before. To make it tangible, we created a role-playing game called Tollerama, where teams acted as producers, processors, and consumers negotiating under real market rules.          </p>
+            <p class="case-description-black"> In just a few rounds, colleagues experienced the same trade-offs and tensions our users face every day. This playful approach helped the entire company understand tolling better, align on its value, and even enjoy the learning process. </p>
+           <p class="case-description">Learn more →<br></p>
+           <a href="https://medium.com/metalshub/tollerama-gamification-for-buy-in-97cf94b710aa">Gamification for Tolling</a>
+        </div>
+        <figure>
+          <img src="../img/Tolling/Tollerama.png" alt="allocation">
+        </figure>
+        
+      </section>
+
+      <!-- 更多项目 -->
+
+    </main>
+  </div>
+
+  <!-- 底部信息，与主站保持一致 -->
+  <footer class="footer">
+    <div class="footer-left">
+        <span><a href="mailto:m7odesign@outlook.com">m7odesign@outlook.com</a></span>
+    </div>
+    <div class="footer-center">
+        <span>✨ Yes, I'm available, invite me to your party, diving, sking, art festival, etc</span>
+    </div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/miomiomiomiomiomiomio/">INSTAGRAM</a>
+        <a href="https://DRIBBBLE.com/Journeymio">DRIBBBLE</a>
+        <a href="https://www.linkedin.com/in/sitong-liu-mio/">LINKEDIN</a> 
+        <a href="https://github.com/Journeym7o">GITHUB</a>
+    </div>
+</footer>
+
+  <!-- 图片放大查看模态框 -->
+  <div id="imageModal" class="image-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+  </div>
+
+  <script src="../js.js"></script>
+</body>
+</html>

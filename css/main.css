@@ -1,0 +1,347 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'inter', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: none; /* 隐藏默认鼠标指针 */
+    overflow-x: hidden;
+}
+
+/* 自定义鼠标指针 */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: normal;
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+
+/* 头部导航 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(245, 245, 245, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+.nav-center {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-center a:hover {
+    opacity: 0.6;
+}
+
+.nav-right {
+    font-size: 12px;
+    color: #aeaeae;
+}
+
+/* 主要内容 */
+.main-content {
+    padding-top: 80px;
+}
+
+/* 介绍部分 */
+.intro {
+    padding: 100px 120px 150px;
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(32px, 5vw, 64px);
+    line-height: 1.2;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.scroll-indicator {
+    font-size: 12px;
+    color: #aeaeae;
+    letter-spacing: 2px;
+}
+
+/* 作品展示区域 */
+.work-section {
+    padding-left: 40px;
+}
+
+.work-item {
+    margin-bottom: 150px;
+}
+
+.work-content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 80px;
+    align-items: start;
+}
+
+/* 保持所有项目都是文字在左，图片在右 */
+.work-item .work-info {
+    order: 1;
+}
+
+.work-item .work-image {
+    order: 2;
+}
+
+/* 作品信息 */
+.work-info {
+    max-width: 400px; /* 限制文字区域最大宽度 */
+}
+
+.work-info h2 {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex: 0 0 auto;
+    font-family: 'Inter', sans-serif;  /* 使用Inter字体 */
+    padding-bottom: 10px;
+}
+
+.work-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #999;
+    font-weight: 300; 
+    margin-bottom: 20px;
+}
+
+.work-title {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #222;
+    font-weight: 300; 
+    margin-bottom: 60px;
+}
+
+.work-meta p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 300; 
+    margin-bottom: 30px;
+}
+
+.work-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.work-links span {
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.work-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.work-link:hover {
+    opacity: 0.6;
+}
+
+/* 作品图片 */
+.work-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.work-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.work-image img {
+    padding-right:0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+    opacity: 1;
+}
+
+.work-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* 底部信息 */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 40px 40px;
+    margin-top: 150px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 12px;
+}
+
+.footer-center {
+    text-align: center;
+    line-height: 1.4;
+}
+
+.footer-right {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #aeaeae;
+    transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+    color: #333;
+}
+
+.footer-left a {
+    text-decoration: none;
+    color: #aeaeae;
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+    color: #333;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .work-content {
+        grid-template-columns: 1fr 3fr;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .work-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .work-item:nth-child(even) .work-info {
+        order: 1;
+    }
+    
+    .work-item:nth-child(even) .work-image {
+        order: 2;
+    }
+    
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .intro, .work-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 60px 20px 30px;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-center {
+        gap: 20px;
+    }
+    
+    .nav-center a {
+        font-size: 12px;
+    }
+    
+    .work-item {
+        margin-bottom: 80px;
+    }
+    
+    .work-content {
+        gap: 30px;
+    }
+    
+    .title {
+        margin-bottom: 60px;
+    }
+}
+
+/* 选择文本样式 */
+::selection {
+    background-color: #000;
+    color: #fff;
+}
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 对于 Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* 对于 IE 和 Edge */
+body {
+    -ms-overflow-style: none;
+}

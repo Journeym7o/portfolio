@@ -1,0 +1,415 @@
+/* 重置与基础，参考你的主站风格 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root{
+  --bg:#f5f5f5;
+  --text:#333;
+  --muted:#aeaeae;
+  --line:#e0e0e0;
+  --link:#0b57d0;
+  --max:1280px;
+}
+
+body {
+    font-family: 'inter', Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: none; /* 隐藏默认鼠标指针 */
+    overflow-x: hidden;
+    overflow-y: auto; /* 只在需要时显示垂直滚动条 */
+}
+
+/* 自定义鼠标指针 */
+.cursor{
+  position: fixed;
+  width: 20px; height: 20px;
+  background-color: #000; border-radius: 50%;
+  pointer-events: none; z-index: 9999;
+  transition: transform .1s ease;
+  mix-blend-mode: normal; opacity: 1;
+  top: 0; left: 0;
+}
+
+/* 顶部导航 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(245, 245, 245, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    font-size: 14px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+.nav-center {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-center a:hover {
+    opacity: 0.6;
+}
+
+.nav-right {
+    font-size: 12px;
+    color: #aeaeae;
+}
+
+/* 主要内容 */
+.main-content {
+    padding-top: 80px;
+}
+
+/* 介绍部分 */
+.intro {
+    padding: 120px 40px 60px;
+    text-align: left;
+    max-width: 100%;
+}
+
+.text-content {
+  width: 100%;
+  padding-right: 40px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  margin-left: auto;             /* 让文字内容向右对齐 */
+}
+
+/* 章节标题样式 */
+.section-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 0;                    /* 移除顶部margin */
+}
+
+.case-description-black {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 300; 
+  margin-bottom: 30px;
+}
+
+/* 主体 1:9 布局容器 */
+.case-wrap{
+    max-width: none;                     /* 页面宽度全宽 */
+    margin: 0;
+    display: grid;
+    grid-template-columns: 280px 1fr;   /* ← 目录 280，内容占剩余空间 */
+    gap: 0;                              /* 无间隙 */
+    padding-top: 0;                      /* 顶部无额外padding */
+    min-height: calc(100vh - 80px);      /* 确保高度占满 */
+  }
+  
+
+/* 左侧目录菜单 */
+.case-menu{
+    grid-column: 1;
+    padding: 20px 40px 40px 40px;          /* 顶部140px给导航留空间 */
+    position: sticky; 
+    top: 0;                                 /* 从顶部开始 */
+    height: calc(100vh - 80px);             /* 减去导航栏高度 */
+    overflow-y: auto;                       /* 只在需要时显示垂直滚动条 */
+    background-color: var(--bg);            /* 确保背景色 */
+  }
+.case-menu .menu-title{
+  display: block; 
+  font-weight: 600; 
+  color: var(--muted); 
+  margin-bottom: 24px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.case-menu a{
+  display: block; 
+  color: #666; 
+  text-decoration: none; 
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+.case-menu a:hover{
+  color: #333;
+}
+.case-menu .menu-note{
+  color: var(--muted); 
+  font-size: 11px; 
+  margin-top: 40px; 
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  line-height: 1.4;
+}
+
+/* 右侧内容区 */
+.case-content{
+    grid-column: 2;
+    justify-self: stretch;     /* 占满剩余空间 */
+    padding: 20px 0px 96px 40px;    /* 最小化顶部padding，左右40px内边距 */
+    max-width: none;               /* 移除最大宽度限制 */
+    width: 100%;                   /* 占满可用宽度 */
+  }
+
+/* 主轮播样式 */
+.main-carousel {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-slide video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 200;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+  left: 30px;
+}
+
+.next-btn {
+  right: 30px;
+}
+
+/* 轮播图项目说明 */
+.carousel-note {
+  text-align: right;
+  font-size: 11px;
+  color: #aeaeae;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  padding-right: 30px;
+}
+
+/* 底部信息 */
+.footer{
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 80px 40px 40px; margin-top: 40px;
+  border-top: 1px solid var(--line); font-size: 12px; background: transparent;
+}
+.footer-center{ text-align: center; line-height: 1.4; }
+.footer-right{ display: flex; gap: 30px; }
+.footer-right a{ text-decoration: none; color: #aeaeae; transition: color .3s ease; }
+.footer-right a:hover{ color: #333; }
+
+.footer-left a {
+  text-decoration: none;
+  color: #aeaeae;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: #333;
+}
+
+/* 图片放大查看模态框 */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10001;
+  pointer-events: none;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 200;
+  cursor: pointer;
+  z-index: 10001;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close:hover,
+.close:focus {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+#caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 80%;
+}
+
+/* 选择与滚动条 */
+::selection{ background:#000; color:#fff; }
+
+/* 隐藏滚动条 */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* 对于 Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* 对于 IE 和 Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+/* 响应式 */
+@media (max-width: 1200px){
+  .case-wrap{ 
+    grid-template-columns: 1fr; 
+    gap: 0;
+  }
+  .case-menu{
+    display: none;                     /* 隐藏菜单 */
+  }
+  .case-content{ 
+    padding: 40px 40px 96px 40px;    /* 小屏幕下添加左右40px padding */
+    max-width: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  .header{ 
+    padding: 15px 20px; 
+  }
+}
+
+@media (max-width: 768px){
+  .nav-center{ gap: 20px; }
+  .nav-center a{ font-size: 12px; }
+}
